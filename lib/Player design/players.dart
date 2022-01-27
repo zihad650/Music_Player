@@ -28,9 +28,10 @@ class _PlayersState extends State<Players> {
             scrollDirection: Axis.horizontal,
           ),
           ),
-          Text("Gidget", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 28, color: Color(0xff6f3d2e)),),
-          Text("The free Nationals", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20, color: Color(0xff6f3d2e)),),
-
+          SizedBox(height: 30,),
+          Text("Gidget", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 35, color: Color(0xff6f3d2e)),),
+          Text("The free Nationals", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 25, color: Color(0xff6f3d2e)),),
+            SizedBox(height: 55,),
           SliderTheme(
             data: SliderThemeData(
               trackHeight: 5,
@@ -49,14 +50,32 @@ class _PlayersState extends State<Players> {
               max: 20,
             ),
           ),
-          Row(
-            children: [
-              Controls(),
-              Controls(),
-              PlayControl(),
-              Controls(),
-              Controls(),
-            ],
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Controls1(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Controls2(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: PlayControl(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Controls3(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Controls4(),
+                ),
+              ],
+            ),
           )
          ,
         ],

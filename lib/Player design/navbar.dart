@@ -16,7 +16,7 @@ class NavBar extends StatelessWidget {
           NavBarItem(
             icon: Icons.arrow_back_ios,
           ),
-          Text("Playing Now", style: TextStyle(fontSize: 16, color: Color(0xff6f3d2e),fontWeight: FontWeight.w500),),
+          Text("Playing Now", style: TextStyle(fontSize: 26, color: Color(0xff6f3d2e),fontWeight: FontWeight.w500),),
           NavBarItem(
             icon: Icons.list,
           )
