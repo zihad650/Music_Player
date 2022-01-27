@@ -30,8 +30,8 @@ class PlayControl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
-      width: 100,
+      height: 99,
+      width: 99,
       decoration: BoxDecoration(
           color: Color(0xffedd3cb),
           shape: BoxShape.circle,
@@ -78,8 +78,8 @@ class Controls1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
-      width: 60,
+      height: 58,
+      width: 58,
       decoration: BoxDecoration(
           color: Color(0xffedd3cb),
           shape: BoxShape.circle,
@@ -123,8 +123,8 @@ class Controls2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
-      width: 60,
+      height: 58,
+      width: 58,
       decoration: BoxDecoration(
           color: Color(0xffedd3cb),
           shape: BoxShape.circle,
@@ -168,8 +168,8 @@ class Controls3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
-      width: 60,
+      height: 58,
+      width: 58,
       decoration: BoxDecoration(
           color: Color(0xffedd3cb),
           shape: BoxShape.circle,
@@ -213,8 +213,8 @@ class Controls4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
-      width: 60,
+      height: 58,
+      width: 58,
       decoration: BoxDecoration(
           color: Color(0xffedd3cb),
           shape: BoxShape.circle,
