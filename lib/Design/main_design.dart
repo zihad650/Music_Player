@@ -29,13 +29,18 @@ class _MainDesignState extends State<MainDesign> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.65,
-                      width: MediaQuery.of(context).size.width,
-                      child: Image.asset(
-                        "images/photo home.jpg",
-                        fit: BoxFit.fill,
-                      ),
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileDesign()));
+                      },
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.65,
+                        width: MediaQuery.of(context).size.width,
+                          child: Image.asset(
+                            "images/photo home.jpg",
+                            fit: BoxFit.fill,
+                          ),
+                        ),
                     ),
                     SizedBox(
                       width: 10,
