@@ -1,192 +1,116 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/List/songs_list.dart';
 import 'package:music_player/Player%20design/players.dart';
 
-class RecentMusic extends StatefulWidget {
-  const RecentMusic({Key? key}) : super(key: key);
+class ProfileDesign extends StatefulWidget {
+  const ProfileDesign({Key? key}) : super(key: key);
 
   @override
-  _RecentMusicState createState() => _RecentMusicState();
+  _ProfileDesignState createState() => _ProfileDesignState();
 }
 
-class _RecentMusicState extends State<RecentMusic> {
+class _ProfileDesignState extends State<ProfileDesign> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Colors.white10,
       body: ListView(
-        children: [Padding(
-          padding: const EdgeInsets.only(top: 35, left: 10, right: 10),
+
+        children:[ Container(
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  CircleAvatar(
-                    backgroundImage: AssetImage("images/mypic.JPG"),
-                    maxRadius: 35,
+              Stack(
+                children:[
+                  Container(
+                    height: 250,
+                    width: MediaQuery.of(context).size.width,
+                    child: Image.asset("images/bg.png",
+                    fit: BoxFit.cover,),
+
                   ),
-                  SizedBox(width: 10,),
-                  Text("+880 1884 585755",style: TextStyle(color: Colors.white, fontSize: 15),),
-                  SizedBox(width: 80,),
-                  Icon(Icons.notifications_active, size: 40, color: Colors.white,),
-                  SizedBox(width: 10,),
-                  Icon(Icons.settings, size: 40, color: Colors.white),
-                ],
-              ), //avater design all
-              SizedBox(height: 15,),
-              Container(
-                child: Card(
-                  elevation: 5,
-                  color: Colors.white10,
-                  child: Row(
-                    children: [
-                      Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 135),
-                              child: Text("UPGRADE TO PRO",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(color: Colors.white),
-                              ),
+                  Container(
+                    alignment: Alignment.bottomRight,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 55, right: 25),
+                      child: Icon(Icons.share_sharp, color: Colors.white,size: 35,),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 82, right:0, top: 50),
+                    child: Container(
+                      height: 200,
+                      width: 200,
+                      padding: EdgeInsets.all(5),
+                      margin: EdgeInsets.symmetric(horizontal: 15,vertical: 30),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset("images/james.jpg",fit: BoxFit.cover,)),
+                      decoration: BoxDecoration(
+                          color: Color(0xffedd3cb),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0xff502213),
+                              offset: Offset(1,1),
+                              spreadRadius: 3,
+                              blurRadius: 10,
                             ),
-                            SizedBox(height: 05,),
-                            Text(" Add-free, unlimited offline downlords and create playlist.",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 10, color: Colors.white),
-                            ),
-                          ],
+                            BoxShadow(color: Colors.white,
+                                offset:Offset(-1, -2),spreadRadius: -2, blurRadius: 10)
+                          ]
                       ),
-                    SizedBox(width: 30,),
-                    TextButton(onPressed: (){}, child: Text("Get Pro"),)
+
+
+                    ),
+                  ),
+
+                ],
+              ),
+              Container(
+                child: Column(
+                  children: [
+                    Text("James", style: TextStyle(fontSize: 30, color: Colors.white),),
+                    Text("100 Following * 100 Monthly Listeners", style: TextStyle(fontSize: 16, color: Colors.white)),
+                    SizedBox(height: 8,),
+                    RaisedButton(
+                      color: Colors.blueAccent,
+                      child: Text('Follow',style: TextStyle(color: Colors.white, fontSize: 20),),
+                      splashColor: Colors.blue,
+                      elevation: 1,
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 240),
+                        child: Text("Biography",style: TextStyle(fontSize: 30, color: Colors.white),),
+                      ),
+                      Text("James has drawn on many musical styles to create his own sound a clash of pop, electronica and rock. James has drawn on many musical styles to create his own sound a clash of pop, electronica and rock.James has drawn on many musical styles to create his own sound a clash of pop, electronica and rock.",style: TextStyle(fontSize: 15,color: Colors.white),)
                     ],
                   ),
                 ),
-              ),  //upgrade card
-              SizedBox(height: 10,),
-              Row(
-                children: [
-                  Card(
-                    elevation: 5,
-                    color: Colors.white10,
-                    child: Container(
-                      height: 100,
-                      width: MediaQuery.of(context).size.width*0.29,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.cloud_done, color: Colors.blue,),
-                          Text("Downlords", style: TextStyle(color: Colors.white),)
-                        ],
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 5,
-                    color: Colors.white10,
-                    child: Container(
-                      height: 100,
-                      width: MediaQuery.of(context).size.width*0.30,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.favorite, color: Colors.red,),
-                          Text("Favorite", style: TextStyle(color: Colors.white),)
-                        ],
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 5,
-                    color: Colors.white10,
-                    child: Container(
-                      height: 100,
-                      width: MediaQuery.of(context).size.width*0.30,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.add_to_photos_rounded, color: Colors.blue,),
-                          Text("Playlist", style: TextStyle(color: Colors.white),)
-                        ],
-                      ),
-                    ),
-                  ),
+              ),
 
-                ],
-              ),  //downlord to playlist card
-              Row(
-                children: [
-                  Card(
-                    elevation: 5,
-                    color: Colors.white10,
-                    child: Container(
-                      height: 100,
-                      width: MediaQuery.of(context).size.width*0.29,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.music_note_outlined, color: Colors.blueAccent,),
-                          Text("Songs", style: TextStyle(color: Colors.white),)
-                        ],
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 5,
-                    color: Colors.white10,
-                    child: Container(
-                      height: 100,
-                      width: MediaQuery.of(context).size.width*0.30,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.queue_music, color: Colors.orangeAccent,),
-                          Text("Albums", style: TextStyle(color: Colors.white),)
-                        ],
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 5,
-                    color: Colors.white10,
-                    child: Container(
-                      height: 100,
-                      width: MediaQuery.of(context).size.width*0.30,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.people_alt_sharp, color: Colors.blue,),
-                          Text("Artists", style: TextStyle(color: Colors.white),)
-                        ],
-                      ),
-                    ),
-                  ),
-
-                ],
-              ), //songs to artists card
-              SizedBox(height: 20,),
-              Row(
-                children: [
-                  Text("Recently Played", style: TextStyle(fontSize: 30, color: Colors.white),),
-                  SizedBox(width: 80,),
-                  InkWell(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SongsList()));
-                    },
-                    child: Card(
-                      elevation: 5,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Text("List of Songs", style: TextStyle(fontSize: 30, color: Colors.white),),
+                    SizedBox(width: 100,),
+                    Card(
+                        elevation: 5,
                         color: Colors.black45,
                         child: Text(" View All ", style: TextStyle(fontSize: 15, color: Colors.white),)),
-                  ),
-                ],
+                  ],
+                ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 10,),
+
               Row(
                 children: [
                   Container(
@@ -401,11 +325,11 @@ class _RecentMusicState extends State<RecentMusic> {
                   ),
                 ],
               ),
-              SizedBox(height: 10,),
+
             ],
           ),
         ),
-    ],
+       ],
       ),
     );
   }

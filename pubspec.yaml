@@ -62,6 +62,8 @@ flutter:
   assets:
      - images/Fontpage.jpg
      - images/photo home.jpg
+     - images/2h.jpg
+     - images/1h.jpg
      - images/tuhin's pic.jpg
      - images/artcell logo.png
      - images/shironamhin.jpg
@@ -79,6 +81,7 @@ flutter:
      - images/2000's.jpg
      - images/70's.jpg
      - images/mypic.JPG
+     - images/bg.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
